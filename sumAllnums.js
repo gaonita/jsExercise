@@ -38,8 +38,8 @@
 // }
 
  function refactoring(arr1, arr2) {
-    let copyArr1 = arr1.slice(0,arr1.length).filter(e => !arr2.includes(e));
-    let copyArr2 = arr2.slice(0,arr2.length).filter(e => !arr1.includes(e));
+    let copyArr1 = arr1.filter(e => !arr2.includes(e));
+    let copyArr2 = arr2.filter(e => !arr1.includes(e));
     let newArr = copyArr1.concat(copyArr2)
     return newArr;
 }
